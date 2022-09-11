@@ -1,0 +1,1 @@
+type copyObject = (objectToCopy: any) => any
