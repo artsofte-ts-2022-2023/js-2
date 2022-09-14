@@ -60,5 +60,5 @@ export const miltyplyBooleanValue = () => {
     }
     multiplyPropertyValue(testObject, 'boolean', 3);
 
-    assert.equal(`{"a":5,"b":"stringstringstring","c":10,"d":"asdasdasd","e":true`, JSON.stringify(testObject))
+    assert.equal(`{"a":5,"b":"string","c":10,"d":"asd","e":true}`, JSON.stringify(testObject));
 }
