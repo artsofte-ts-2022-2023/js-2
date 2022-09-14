@@ -1,7 +1,7 @@
 import { strict as assert } from "assert";
 import { getUniqueFieldsValueFromObject } from '../solution.js';
 
-export const miltyplyNumberValue = () => {
+export const publicTest = () => {
     const testObject = {
         a: 5,
         b: 'b',

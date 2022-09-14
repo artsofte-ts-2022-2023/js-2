@@ -1,40 +1,40 @@
 import { strict as assert } from "assert";
-import { protectObjectValueFromChange } from "../solution.js";
+import { protectObjectValueFromChange } from '../solution.js';
 
 export const tryToRewriteString = () => {
-  const initValue = "string";
+    const initValue = 'string';
 
-  const testObject = {
-    a: 5,
-    b: initValue,
-    c: 10,
-    d: "asd",
-  };
-  protectObjectValueFromChange(testObject, "b");
-  try {
-    testObject.b = "changedValue";
-    assert.equal(true, false);
-  } catch (err) {
-    assert.equal(true, true);
-  }
-};
+    const testObject = {
+        a: 5,
+        b: initValue,
+        c: 10,
+        d: 'asd'
+    }
+    protectObjectValueFromChange(testObject, 'b');
+    try {
+        testObject.b = 'changedValue';
+    } catch(err) {
+        assert.equal(true, true);
+    }
+
+}
 
 export const tryToRewriteObject = () => {
-  const initValue = {
-    ha: "55",
-  };
+    const initValue = {
+        ha: '55'
+    };
 
-  const testObject = {
-    a: 5,
-    b: initValue,
-    c: 10,
-    d: "asd",
-  };
-  protectObjectValueFromChange(testObject, "b");
-  try {
-    testObject.b = "changedValue";
-    assert.equal(true, false);
-  } catch (err) {
-    assert.equal(true, true);
-  }
-};
+    const testObject = {
+        a: 5,
+        b: initValue,
+        c: 10,
+        d: 'asd',
+    }
+    protectObjectValueFromChange(testObject, 'b');
+    try {
+        testObject.b = 'changedValue';
+    } catch(err) {
+        assert.equal(true, true);
+    }
+
+}

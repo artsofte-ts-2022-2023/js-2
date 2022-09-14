@@ -15,7 +15,7 @@ export const simpleAddFieldTest = () => {
     const isCorrectAField = !!(testObject.hasOwnProperty('a') && testObject.a === a);
     const isCorrectBField = !!(testObject.hasOwnProperty('b') && testObject.b === b);
     const isCorrectCField = !!(testObject.hasOwnProperty('c') && testObject.c === c);
-    const isHaveCorrectFieldLenght = Object.keys(testObject).length === 3;    
+    const isHaveCorrectFieldLenght = Object.keys(testObject).length === 5;    
 
     assert.equal(isCorrectAField && isCorrectBField && isCorrectCField && isHaveCorrectFieldLenght, true);
 }
