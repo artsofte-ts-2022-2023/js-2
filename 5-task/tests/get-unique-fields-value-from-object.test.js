@@ -35,3 +35,41 @@ export const publicTest = () => {
 
     assert.equal(`[5,6,7,8]`, JSON.stringify(result))
 }
+
+export const publicTestTwo = () => {
+    const testObject = {
+        a: 6,
+        b: 'b',
+        c: {
+            a: 8,
+            b: 'b',
+            c: {
+                b: 'c'
+            },
+            d: {
+                a: 7,
+                b: [
+                    {
+                        a: 5,
+                        b: 'g'
+                    },
+                    {
+                        a: 785648,
+                        b: [
+                            {
+                                a: 8,
+                                b: 'end'
+                            }
+                        ],
+                        c: {
+                            a: 10
+                        }
+                    }
+                ]
+            }
+        }
+    }
+    const result = getUniqueFieldsValueFromObject(testObject, 'b');
+
+    assert.equal(`["b","c",[{"a":5,"b":"g"},{"a":785648,"b":[{"a":8,"b":"end"}],"c":{"a":10}}],"g",[{"a":8,"b":"end"}],"end"]`, JSON.stringify(result))
+}
