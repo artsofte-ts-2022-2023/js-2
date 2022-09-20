@@ -15,7 +15,7 @@ function publicTest2() {
 }
 
 function publicTest3() {
-    const source = (a) = console.log(a);
+    const source = (a) => console.log(a);
     const copy = copyObject(source);
     return JSON.stringify(source) === JSON.stringify(copy) && isCopy(source, copy);
 }
